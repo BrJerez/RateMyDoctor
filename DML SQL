@@ -1,0 +1,182 @@
+INSERT INTO PATIENT VALUES(NULL, 'user01', 'password', 'vincent', 'nguyen', '9433 farifax ', 'fairfax', 'va', '22031', '5712251111', 'vnguyen84@gwmail.gwu.edu', '1990-04-07', CURRENT_TIMESTAMP);
+INSERT INTO PATIENT VALUES(NULL, 'user02', 'password', 'lee', 'nguyen', '9423 farifax ', 'fairfax', 'va', '22031', '5712252222', 'vnguyen84@gwmail.gwu.edu', '1991-04-07', CURRENT_TIMESTAMP);
+INSERT INTO PATIENT VALUES(NULL, 'user03', 'password', 'park', 'tran', '9227 farifax ', 'fairfax', 'va', '22031', '5712253333', 'vnguyen84@gwmail.gwu.edu', '1992-04-07', CURRENT_TIMESTAMP);
+INSERT INTO PATIENT VALUES(NULL, 'user04', 'password', 'dana', 'nguyen', '1147 farifax ', 'fairfax', 'va', '22031', '571225444', 'vnguyen84@gwmail.gwu.edu', '1993-04-07', CURRENT_TIMESTAMP);
+INSERT INTO PATIENT VALUES(NULL, 'user05', 'password', 'michelle', 'dana', '4447 arlington ', 'fairfax', 'va', '22031', '5712255555', 'vnguyen84@gwmail.gwu.edu', '1994-04-07', CURRENT_TIMESTAMP);
+INSERT INTO PATIENT VALUES(NULL, 'user06', 'password', 'michale', 'snider', '9247 farifax ', 'fairfax', 'va', '22031', '5712256666', 'vnguyen84@gwmail.gwu.edu', '1995-04-07', CURRENT_TIMESTAMP);
+INSERT INTO PATIENT VALUES(NULL, 'user07', 'password', 'van', 'nguyen', '9447 farifax ', 'fairfax', 'va', '22031', '5712257777', 'vnguyen84@gwmail.gwu.edu', '1997-04-07', CURRENT_TIMESTAMP);
+INSERT INTO PATIENT VALUES(NULL, 'user08', 'password', 'rich', 'nguyen', '9447 lee ', 'fairfax', 'va', '22031', '5712258888', 'vnguyen84@gwmail.gwu.edu', '1998-04-07', CURRENT_TIMESTAMP);
+INSERT INTO PATIENT VALUES(NULL, 'user09', 'password', 'victor', 'nguyen', '9447 nutley ', 'fairfax', 'va', '22031', '5712259999', 'vnguyen84@gwmail.gwu.edu', '1999-04-07', CURRENT_TIMESTAMP);
+INSERT INTO PATIENT VALUES(NULL, 'user10', 'password', 'turkin', 'vang', '1237 n quarker lane ', 'alexandria', 'va', '22310', '5718743311', 'turkinvang@gmail.com', '1990-06-09', CURRENT_TIMESTAMP);
+
+INSERT INTO POSITION_T VALUES ('P001', 'Medical Receptionist ');
+INSERT INTO POSITION_T VALUES ('P002','Medical Billers');
+INSERT INTO POSITION_T VALUES ('P003','Physician Assistant');
+INSERT INTO POSITION_T VALUES ('P004','Clinic Manager');
+INSERT INTO POSITION_T VALUES ('P005','Pharmacist Assistant');
+INSERT INTO POSITION_T VALUES ('P006','Digital Vision');
+INSERT INTO POSITION_T VALUES ('P007','Health Care Assistant');
+INSERT INTO POSITION_T VALUES ('P008','Vice-President');
+INSERT INTO POSITION_T VALUES ('P009','President');
+INSERT INTO POSITION_T VALUES ('P010','Medical Office Manager');
+
+Insert into medicalemployee values('PEMP001', 'Donald', 'Watren', '200 Somerset Street', 'Fairfax', 'VA', '22031', '561-655-5511','donaldwatren@gmail.com', '1950-09-10','P009' ,'Miami Valley Hospital 1979-1992 - Good Samaritan Hospital 1992-present - Voluntary Assistant Professor of Family Medicine, University of Miami', 'American Board of Family Practice 1979-Present - Florida Academy of Family Practice 1992-Present', NULL, 'American Academy of Family Practice - American Academy of HIV Medicine', 'Residency: Miami Valley Hospital Dayton, OH 1977-1979 - Internship: Miami Valley Hospital Dayton, OH 1976-1977 - Medical School: Ohio State University Columbus, OH - Doctorate of Medicine 1976 Undergraduate: University of Cincinnati Cincinnati, OH Bachelor of Science 1973','male','Physician');
+
+INSERT into medicalemployee values('PEMP002', 'Kimvir', 'Dhillon', '23961 Clle D La Mgdln', 'Fairfax', 'VA', '22031', '949-588-8700', 'kimvirdhilon@gmail.com', '1965-11-10', 'P008','Dr. Kimvir Dhillon completed his training in internal medicine at UCLA Medical Center, and went on to specialize in endocrinology at UCLA Medical Center. During his endocrinology fellowship, Dr. Dhillon had extensive clinical training by leaders in the field of endocrinology with a particular interest in the treatment of thyroid diseases, pituitary diseases, adrenal tumors, and diabetes. He was active in the research of diabetes management, thyroid disorders, parathyroid disorders, and pituitary tumors. He also had extensive training in performing ultrasounds and ultrasound guided thyroid biopsies', NULL,NULL, 'Diplomate, American Board of Internal Medicine, 2001 - American Board of Endocrinology, 2003', 'Internship and Residency at the University of California, Los Angeles, 1998 - 2001 - Fellowship in Endocrinology at the University of California, Los Angeles, 2001 - 2003', 'male','Physician');
+
+INSERT into medicalemployee values('PEMP003', 'Barry', 'George', '3650 River Rd #300', 'Fairfax', 'VA', '22031', '614-538-0527', 'barrygeorge@gmail.com', '1955-09-15', 'P004','Barry George, MD, FACC, FSCAI, FACP, an interventional cardiologist, is the director of advanced interventional cardiovascular medicine and structural heart disease, an associate professor of clinical internal medicine, and director of advanced cardiovascular catheter-based therapies at The Ohio State University Wexner Medical Center in Columbus, Ohio. Dr. George earned his medical degree from The Ohio State University Wexner Medical Center and completed his residency and a fellowship at Riverside Methodist Hospital in Columbus, Ohio. He is board certified in internal medicine, cardiovascular disease and interventional cardiology', 'Nominated one of 4,800 Top Doctors in America - Nominated one of the Top Doctors of Central Ohio WTVN and the Columbus Dispatch, 2004 - Cardiologist Best Doctors in America', NULL, 'American Board of Internal Medicine 1982 - American Board of Internal Medicine (Subspecialty: Cardiovascular) 1985 -  American Board of Internal Medicine (Subspecialty: Interventional Cardiology)2003', NULL, 'male','Physician');
+
+INSERT into medicalemployee values('PEMP004', 'Anand', 'Gundakaram', '1074 S State St', 'Alexandria', 'VA', '22310', '302-678-8100', 'anandgundakaram@gmail.com', '1966-02-12','P004', 'Dr. Anand Gundakaram is a pediatric neurologist in Dover, Delaware and is affiliated with one hospital. He has been in practice for more than 20 years', NULL, NULL, 'American Board of Psychiatry and Neurology Certified in Neurology with Special Qualification in Child Neurology - MI State Medical License Active through 2018 - DE State Medical License Active through 2021 - NJ State Medical License Active through 2021', 'University of Michigan Hospitals and Health Centers Residency , Child Neurology - University of Michigan Hospitals and Health Centers Fellowship , Child Neurology -Texas Tech University at Lubbock Residency , Pediatrics - Sri Venkatesvara Medical College NTR Medical School', 'male','Physician');
+
+INSERT into medicalemployee values('PEMP005', 'Viet', 'Nguyen', '6259 Annandale Blvd', 'Annandale', 'VA', '22150', '703-556-8595', 'vietnguyen@gmail.com', '1985-05-06', 'P010','University of Maryland School of Medicine - Internal Medicine/Primary Care - Clinical Instructor 2014 – Present', NULL, NULL, 'Member of Medical Society of Northern Virginia 2015 – Present', 'Residency Cleveland Clinic Florida Internal Medicine Weston, FL 2011 - Internship University of Miami School of Medicine Internal Medicine Miami, FL 2009 - Medical School Nova Southeastern University College of Osteopathic Medicine Doctor of Osteopathic Medicine Ft. Lauderdale, FL 2008 - Undergraduate School University of Virginia Bachelor of Arts in Chemistry Charlottesville, VA 2002', 'male','Physician');
+
+INSERT into medicalemployee values('MAEMP006', 'Jung', 'Kim', '6108 Thornwood Drive', 'Alexandria', 'VA', '22310', '703-998-5687', 'jungkim@gmail.com', '1988-07-01', 'P007','While working as a system consultant, Jung became inspired to become a nurse and enrolled at the University of Maryland where she obtained a bachelor degree in nursing. After working in the United Hospital Center Cardiac unit in West Virginia, she moved to the INOVA Hospital Group where she gained broad experience as a float nurse in all 5 of their hospitals', NULL, NULL, 'American Association of Nurse Practitioners - CMAA Certified Medical Administrative Assistant', 'Graduate School Chamberlain College of Nursing Family Nurse Practitioner Downers Grove, IL - Undergraduate School University of Maryland Bachelor of Science in Nursing Baltimore, MD', 'Female','MedicalAssistant');
+
+INSERT into medicalemployee values('MAEMP007', 'John', 'Fleming', '6222 Woodbridge CT', 'Woodbridge', 'VA', '22193', '703-565-7487', 'johnfleming@gmail.com', '1980-05-05', 'P003',NULL,NULL, NULL, 'American Association of Nurse Practitioners - CMAA Certified Medical Administrative Assistant', 'Graduate GWU of Nurse Aide, DC - Undergraduate School University of Maryland Bachelor of Allied Health Clinical Medical Assistant, MD', 'male','MedicalAssistant');
+
+INSERT into medicalemployee values('MAEMP008', 'Sarah', 'Truong', '6216 Briarview Ct', 'Alexandria', 'VA', '22310', '571-544-5956', 'sarahtruong@gmail.com', '1990-02-10', 'P002', NULL, NULL, NULL, 'American Association of Nurse Practitioners - CMAA Certified Medical Administrative Assistant', 'Graduate at Medical Administrative Assistant USMD', 'female','MedicalAssistant');
+
+INSERT into medicalemployee values('MAEMP009', 'Briana', 'Quinn', '3213 Quate Lane', 'Woodbridge', 'VA','22193', '571-554-8733', 'brianaquinn@gmail.com', '1985-05-01','P001',NULL, NULL, NULL, 'American Association of Nurse Practitioners - CMAA Certified Medical Administrative Assistant', 'Graduate Medical Office Assistant: Admin Procedures at Howard University', 'female','MedicalAssistant');
+
+INSERT into medicalemployee values('MAEMP010', 'Joan', 'Ash', '5109 Heming Avenue', 'Springfield', 'VA', '22151', '571-665-2116', 'joanash@gmail.coml', '1980-10-09', 'P001',NULL, NULL, NULL,  'American Association of Nurse Practitioners - CMAA Certified Medical Administrative Assistant', 'Medical Administrative Secretary Bachelor Degree at GWU', 'female','MedicalAssistant');
+
+INSERT INTO PHYSICIAN VALUES('PEMP001', '4', '1', '4');
+INSERT INTO PHYSICIAN VALUES('PEMP002', '10', '2', '5');
+INSERT INTO PHYSICIAN VALUES('PEMP003', '12', '3', '4');
+INSERT INTO PHYSICIAN VALUES('PEMP004', '8', '2', '4');
+INSERT INTO PHYSICIAN VALUES('PEMP005', '6', '2', '3');
+
+INSERT INTO LANGUAGE VALUES ('L001','English');
+INSERT INTO LANGUAGE VALUES ('L002','Spanish');
+INSERT INTO LANGUAGE VALUES ('L003','Madarin Chinese');
+INSERT INTO LANGUAGE VALUES ('L004','Hindi');
+INSERT INTO LANGUAGE VALUES ('L005','Russian');
+INSERT INTO LANGUAGE VALUES ('L006','Japanese');
+INSERT INTO LANGUAGE VALUES ('L007','Korean');
+INSERT INTO LANGUAGE VALUES ('L008','Vietnamese');
+INSERT INTO LANGUAGE VALUES ('L009','French');
+INSERT INTO LANGUAGE VALUES ('L010','German');
+
+INSERT INTO DEGREE VALUES ('D001','Medical Assistant Bachelor degree');
+INSERT INTO DEGREE VALUES ('D002','Medical Assistant Associate degree');
+INSERT INTO DEGREE VALUES ('D003','Medical Administrative Secretary Bachelor Degree');
+INSERT INTO DEGREE VALUES ('D004','Bachelor of Medical Office Assistant degree');
+INSERT INTO DEGREE VALUES ('D005','Certified American Association of Nurse Practitioners');
+INSERT INTO DEGREE VALUES ('D006','Allied Health Clinical Medical Assistant');
+INSERT INTO DEGREE VALUES ('D007','CMAA Certified Medical Administrative Assistant');
+INSERT INTO DEGREE VALUES ('D008','Graduate of Medical Administrative Assistant');
+INSERT INTO DEGREE VALUES ('D009','Graduate of Medical Office Assistant: Admin Procedures');
+INSERT INTO DEGREE VALUES ('D010','Graduate of Nurse Aide (CNA)');
+
+INSERT INTO ACADEMICRANK VALUES ('A001','Medical School Education');
+INSERT INTO ACADEMICRANK VALUES ('A002','Physician');
+INSERT INTO ACADEMICRANK VALUES ('A003','Doctor');
+INSERT INTO ACADEMICRANK VALUES ('A004','Medical Students');
+INSERT INTO ACADEMICRANK VALUES ('A005','Residents');
+INSERT INTO ACADEMICRANK VALUES ('A006','Fellows');
+INSERT INTO ACADEMICRANK VALUES ('A007','Attendings');
+INSERT INTO ACADEMICRANK VALUES ('A008','MD');
+INSERT INTO ACADEMICRANK VALUES ('A009','PHD');
+INSERT INTO ACADEMICRANK VALUES ('A010','DO');
+
+INSERT INTO SPECIALITY VALUES ('S001','Anesthesiology');
+INSERT INTO SPECIALITY VALUES ('S002','Allergy & Immunology');
+INSERT INTO SPECIALITY VALUES ('S003','Cardiology');
+INSERT INTO SPECIALITY VALUES ('S004','Family Practice');
+INSERT INTO SPECIALITY VALUES ('S005','General Surgery');
+INSERT INTO SPECIALITY VALUES ('S006','Internal medicine');
+INSERT INTO SPECIALITY VALUES ('S007','Medical Clinics');
+INSERT INTO SPECIALITY VALUES ('S008','Pediatrics');
+INSERT INTO SPECIALITY VALUES ('S009','Plastic Surgery');
+INSERT INTO SPECIALITY VALUES ('S010','PT/OT');
+
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP006','D005');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP006','D007');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP006','D004');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP006','D010');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP007','D005');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP007','D007');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP007','D006');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP007','D010');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP008','D005');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP008','D007');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP008','D008');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP009','D005');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP009','D007');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP009','D009');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP010','D005');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP010','D007');
+INSERT INTO EMPLOYEEDEGREE VALUES ('MAEMP010','D003');
+
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP001','L002');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP002','L001');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP002','L002');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP002','L004');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP003','L001');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP003','L009');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP004','L001');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP004','L002');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP004','L004');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP005','L001');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP005','L002');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('PEMP005','L008');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('MAEMP006','L001');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('MAEMP006','L007');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('MAEMP007','L001');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('MAEMP007','L002');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('MAEMP007','L009');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('MAEMP008','L001');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('MAEMP008','L008');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('MAEMP009','L001');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('MAEMP009','L002');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('MAEMP009','L009');
+INSERT INTO EMPLOYEELANGUAGE VALUES ('MAEMP010','L001');
+
+INSERT INTO ACADEMICPHYSICIAN VALUES ('PEMP001','A008');
+INSERT INTO ACADEMICPHYSICIAN VALUES ('PEMP002','A002');
+INSERT INTO ACADEMICPHYSICIAN VALUES ('PEMP002','A008');
+INSERT INTO ACADEMICPHYSICIAN VALUES ('PEMP003','A002');
+INSERT INTO ACADEMICPHYSICIAN VALUES ('PEMP003','A008');
+INSERT INTO ACADEMICPHYSICIAN VALUES ('PEMP003','A009');
+INSERT INTO ACADEMICPHYSICIAN VALUES ('PEMP004','A002');
+INSERT INTO ACADEMICPHYSICIAN VALUES ('PEMP004','A008');
+INSERT INTO ACADEMICPHYSICIAN VALUES ('PEMP005','A002');
+INSERT INTO ACADEMICPHYSICIAN VALUES ('PEMP005','A008');
+INSERT INTO ACADEMICPHYSICIAN VALUES ('PEMP005','A009');
+
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP001','S001');
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP001','S002');
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP002','S004');
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP002','S006');
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP003','S007');
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP003','S003');
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP004','S004');
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP004','S006');
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP004','S007');
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP005','S004');
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP005','S005');
+INSERT INTO SPECIALITYPHYSICIAN VALUES ('PEMP005','S008');
+
+INSERT INTO CLINIC VALUES('CID01', '5', 'Fairfax Clinic', '6408 Seven Corners Place Suite C', 'Falls Church', 'va', '22044', '5712255152', 'clinic@gmail.com', 'good clinic', '10', '4.0');
+
+INSERT INTO EMPLOYEECLINIC VALUES('MAEMP006', 'CID01', '1991-04-01');
+INSERT INTO EMPLOYEECLINIC VALUES('MAEMP007', 'CID01', '1992-05-01');
+INSERT INTO EMPLOYEECLINIC VALUES('MAEMP008', 'CID01', '1989-04-05');
+INSERT INTO EMPLOYEECLINIC VALUES('MAEMP009', 'CID01', '1995-04-01');
+INSERT INTO EMPLOYEECLINIC VALUES('MAEMP010', 'CID01', '1991-05-01');
+INSERT INTO EMPLOYEECLINIC VALUES('PEMP001', 'CID01', '1991-01-12');
+INSERT INTO EMPLOYEECLINIC VALUES('PEMP002', 'CID01', '1991-04-13');
+INSERT INTO EMPLOYEECLINIC VALUES('PEMP003', 'CID01', '1991-05-01');
+INSERT INTO EMPLOYEECLINIC VALUES('PEMP004', 'CID01', '1991-12-01');
+INSERT INTO EMPLOYEECLINIC VALUES('PEMP005', 'CID01', '1989-04-01');
+
+INSERT INTO RATE VALUES('r01', 'CID01', '1', 'PEMP001', '4', 'the physician is a good physician ', CURRENT_TIMESTAMP);
+INSERT INTO RATE VALUES('r02', 'CID01', '2', 'PEMP002', '5', 'the physician is a good physician ', CURRENT_TIMESTAMP);
+INSERT INTO RATE VALUES('r03', 'CID01', '3', 'PEMP002', '5', 'the physician is a good physician ', CURRENT_TIMESTAMP);
+INSERT INTO RATE VALUES('r04', 'CID01', '4', 'PEMP003', '4', 'the physician is a good physician ', CURRENT_TIMESTAMP);
+INSERT INTO RATE VALUES('r05', 'CID01', '5', 'PEMP003', '4', 'the physician is a good physician ', CURRENT_TIMESTAMP);
+INSERT INTO RATE VALUES('r06', 'CID01', '6', 'PEMP003', '4', 'the physician is a good physician ', CURRENT_TIMESTAMP);
+INSERT INTO RATE VALUES('r07', 'CID01', '7', 'PEMP004', '4', 'the physician is a good physician ', CURRENT_TIMESTAMP);
+INSERT INTO RATE VALUES('r08', 'CID01', '8', 'PEMP004', '4', 'the physician is a good physician ', CURRENT_TIMESTAMP);
+INSERT INTO RATE VALUES('r09', 'CID01', '9', 'PEMP005', '4', 'the physician is a good physician ', CURRENT_TIMESTAMP);
+INSERT INTO RATE VALUES('r10', 'CID01', '10', 'PEMP005', '2', 'the physician is a bad physician ', CURRENT_TIMESTAMP);
