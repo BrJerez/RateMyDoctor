@@ -1,0 +1,31 @@
+##1.Total number of medical employees in a clinic which has ClinicID is “CID01”
+
+SELECT COUNT(*) FROM employeeclinic;
+
+##2.List all physicians in medicalemployee table 
+
+SELECT * FROM medicalemployee
+WHERE medicalemployee.RoleType="Physician";
+
+##3. Show the information of the physicians which includes employee ID, first name, last name, and average rating which is greater or equal than 4.0.
+
+SELECT medicalemployee.EmployeeID,medicalemployee.EmFirstName,medicalemployee.EmLastName,physician.PhysicianAverageRating
+FROM medicalemployee JOIN physician on medicalemployee.EmployeeID=physician.EmployeeID
+WHERE physician.PhysicianAverageRating >= 4.0
+
+##4. Show the information of employees who can speak VietNamese
+
+SELECT medicalemployee.EmployeeID,medicalemployee.EmFirstName,medicalemployee.EmLastName
+FROM medicalemployee JOIN employeelanguage on medicalemployee.EmployeeID=employeelanguage.EmployeeID
+WHERE employeelanguage.LanguageID="L008"
+
+##5. Show the information of employees who hired between "1991-01-01" and "1995-04-01"
+SELECT medicalemployee.EmployeeID,medicalemployee.EmFirstName,medicalemployee.EmLastName,employeeclinic.HiredDate
+FROM medicalemployee RIGHT JOIN employeeclinic on medicalemployee.EmployeeID=employeeclinic.EmployeeID
+WHERE employeeclinic.HiredDate BETWEEN "1991-01-01" AND "1995-04-01"
+
+##6.who the information of employee who is a medical billers
+
+SELECT medicalemployee.EmployeeID,medicalemployee.EmFirstName,medicalemployee.EmLastName
+FROM medicalemployee join position_t ON medicalemployee.PositionID=position_t.PositionID
+WHERE position_t.PositionName="Medical Billers"
