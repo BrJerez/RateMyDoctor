@@ -1,0 +1,151 @@
+drop database clinic_database;
+Create  database clinic_database;
+
+CREATE TABLE Patient(
+PatientID int(11) AUTO_INCREMENT not null,
+UserName varchar(25) not null UNIQUE,
+UserPassword varchar(25) not null,
+PatientFirstName varchar(25) not null,
+PatientLastName varchar(25) not null,
+PatientStreetAddress varchar(25) not null,
+PatientCity varchar(25) not null,
+PatientState char(2) not null,
+PatientZipCode varchar(25) not null,
+PatientPhoneNumber varchar(25) not null,
+PatientEmail varchar(30) not null,
+PatientDOB date not null,
+AccountCreatedDate datetime DEFAULT CURRENT_TIMESTAMP not null,
+Constraint Patient_PK PRIMARY KEY(PatientID)
+);
+
+CREATE TABLE Position_t(
+PositionID varchar(25) not null,
+PositionName varchar(30) not null,
+Constraint Position_t_PK PRIMARY KEY(PositionID)
+);
+
+CREATE TABLE MedicalEmployee(
+EmployeeID varchar(25) not null,
+EmFirstName varchar(25) not null,
+EmLastName varchar(25) not null,
+EmStreetAddress varchar(25) not null,
+EmCity varchar(25) not null,
+EmState char(2) not null,
+EmZipCode varchar(25) not null,
+EmPhoneNumber varchar(25) not null,
+EmEmail varchar(30) not null,
+EmDOB date not null,
+PositionID varchar(25) not null,
+Experience text ,
+Awards text,
+EmProfilePicture longblob, 
+Certificates text,
+TrainingProcess text,
+Gender ENUM('male', 'female') not null,
+RoleType ENUM('Physician','MedicalAssistant','AministrativeAssistant') NOT null,
+Constraint MedicalEmployee_PK PRIMARY KEY(EmployeeID),
+Constraint MedicalEmployee_FK1 FOREIGN KEY(PositionID) References Position_t(PositionID)
+);
+
+CREATE TABLE Clinic(
+ClinicID varchar(25) not null,
+Total_Physician int(11) not null,
+ClinicName varchar(25) not null,
+ClinicAddress varchar(255) not null,
+ClinicCity varchar(25) not null,
+ClinicState char(2) not null,
+ClinicZipCode varchar(25) not null,
+ClinicPhoneNumber varchar(25) not null,
+ClinicEmail varchar(30) not null,
+ClinicInformation text,
+ClinicTotalReview int(11) not null,
+ClinicAverageRating int(11) not null,
+Constraint Clinic_PK PRIMARY KEY(ClinicID)
+);
+
+CREATE TABLE EmployeeClinic(
+EmployeeID varchar(25) not null,
+ClinicID varchar(30) not null,
+HiredDate date not null,
+Constraint EmployeeClinic_PK PRIMARY KEY(EmployeeID,ClinicID),
+Constraint EmployeeClinic_FK1 FOREIGN KEY (EmployeeID) references MedicalEmployee(EmployeeID),
+Constraint EmployeeClinic_FK2 FOREIGN KEY (ClinicID) references Clinic(ClinicID)
+);
+
+CREATE TABLE AcademicRank(
+AcademicRankID varchar(25) not null,
+AcademicRankName varchar(30) not null,
+Constraint AcademicRank_PK PRIMARY KEY(AcademicRankID)
+);
+
+CREATE TABLE Speciality(
+SpecialityID varchar(25) not null,
+SpecialityName varchar(30) not null,
+Constraint Speciality_PK PRIMARY KEY(SpecialityID)
+);
+
+CREATE TABLE Degree(
+DegreeID varchar(25) not null,
+DegreeName varchar(255) not null,
+Constraint Degree_PK PRIMARY KEY(DegreeID)
+);
+
+CREATE TABLE Language(
+LanguageID varchar(25) not null,
+LanguageName varchar(30) not null,
+Constraint Language_PK PRIMARY KEY(LanguageID)
+) ;
+
+CREATE TABLE  Physician(
+EmployeeID varchar(25) not null,
+PhysicianTotalScore varchar(20),
+PhysicianTotalReview varchar(20),
+PhysicianAverageRating varchar(20),
+Constraint Physician_FK1 FOREIGN KEY (EmployeeID) references MedicalEmployee (EmployeeID)
+);
+
+CREATE TABLE Rate(
+RateID varchar(20) not null,
+ClinicID varchar(20) not null,
+PatientID int(11) not null,
+EmployeeID varchar(20) not null,
+ScaledScore ENUM('1','2','3','4','5') not null,
+ContentRating text,
+EvaluationDateTime datetime DEFAULT CURRENT_TIMESTAMP not null,
+Constraint Rate_PK PRIMARY KEY(RateID),
+Constraint Rate_FK1 FOREIGN KEY (ClinicID) references Clinic(ClinicID),
+Constraint Rate_FK2 FOREIGN KEY (PatientID) references Patient(PatientID),
+Constraint Rate_FK3 FOREIGN KEY (EmployeeID) references Physician(EmployeeID)
+);
+
+CREATE TABLE EmployeeDegree(
+EmployeeID varchar(30) not null,
+DegreeID varchar(25) not null,
+Constraint EmployeeDegree_PK PRIMARY KEY(EmployeeID,DegreeID),
+Constraint EmployeeDegree_FK1 FOREIGN KEY (EmployeeID) references MedicalEmployee(EmployeeID),
+Constraint EmployeeDegree_FK2 FOREIGN KEY (DegreeID) references Degree(DegreeID)
+);
+
+CREATE TABLE EmployeeLanguage(
+EmployeeID varchar(25) not null,
+LanguageID varchar(25) not null,
+Constraint EmployeeLanguage_PK PRIMARY KEY(EmployeeID,LanguageID),
+Constraint EmployeeLanguage_FK1 FOREIGN KEY (EmployeeID) references MedicalEmployee(EmployeeID),
+Constraint EmployeeLanguage_FK2 FOREIGN KEY (LanguageID) references Language(LanguageID)
+);
+
+CREATE TABLE AcademicPhysician(
+EmployeeID varchar(30) not null,
+AcademicRankID varchar(25) not null,
+Constraint AcademicPhysician_PK PRIMARY KEY(EmployeeID,AcademicRankID),
+Constraint AcademicPhysician_FK1 FOREIGN KEY (EmployeeID) references Physician(EmployeeID),
+Constraint AcademicPhysician_FK2 FOREIGN KEY (AcademicRankID) references AcademicRank(AcademicRankID)
+);
+
+CREATE TABLE SpecialityPhysician(
+EmployeeID varchar(30) not null,
+SpecialityID varchar(25) not null,
+Constraint SpecialityPhysician_PK PRIMARY KEY(SpecialityID,EmployeeID),
+Constraint SpecialityPhysician_FK1 FOREIGN KEY (EmployeeID) references Physician(EmployeeID),
+Constraint SpecialityPhysician_FK2 FOREIGN KEY (SpecialityID) references Speciality(SpecialityID)
+);
