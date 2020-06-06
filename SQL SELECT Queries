@@ -29,3 +29,40 @@ WHERE employeeclinic.HiredDate BETWEEN "1991-01-01" AND "1995-04-01"
 SELECT medicalemployee.EmployeeID,medicalemployee.EmFirstName,medicalemployee.EmLastName
 FROM medicalemployee join position_t ON medicalemployee.PositionID=position_t.PositionID
 WHERE position_t.PositionName="Medical Billers"
+
+##7. Show the Physician who got ScaleScored equal ‘5’;
+
+SELECT 
+medicalemployee.EmployeeID,medicalemployee.EmFirstName,medicalemployee.EmLastName
+FROM medicalemployee JOIN physician using (EmployeeID)
+JOIN rate using (EmployeeID)
+WHERE ScaledScore = 5;
+
+##8. Show the Physician who has speciality in ‘Family Practice’.
+
+SELECT 
+medicalemployee.EmployeeID,medicalemployee.EmFirstName,medicalemployee.EmLastName,speciality.SpecialityID,speciality.SpecialityName
+FROM medicalemployee JOIN physician USING (EmployeeID)
+JOIN specialityphysician USING (EmployeeID)
+JOIN speciality USING (SpecialityID)
+WHERE SpecialityID = 'S004';
+
+##9. Show the employee who graduated from ‘Nurse Aide’.
+
+SELECT 
+medicalemployee.EmployeeID,medicalemployee.EmFirstName,medicalemployee.EmLastName,degree.DegreeID, degree.DegreeName
+FROM medicalemployee JOIN employeedegree USING (EmployeeID)
+JOIN degree USING (DegreeID)
+WHERE DegreeID = 'D010';
+
+##10. Show the physician who has an academic rank as ‘PHD’ and speciality as General Surgery
+
+SELECT 
+medicalemployee.EmployeeID,medicalemployee.EmFirstName,medicalemployee.EmLastName,academicrank.AcademicRankID,academicrank.AcademicRankName,speciality.SpecialityID,speciality.SpecialityName
+FROM medicalemployee JOIN physician USING (EmployeeID)
+JOIN academicphysician USING (EmployeeID)
+JOIN academicrank USING (AcademicRankID)
+JOIN specialityphysician USING (EmployeeID)
+JOIN speciality USING (SpecialityID)
+Where AcademicRankID = 'A009' and SpecialityID = 'S005';
+
